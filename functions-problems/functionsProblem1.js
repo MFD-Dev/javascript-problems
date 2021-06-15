@@ -10,44 +10,23 @@ longest word within the parameter.
 7.  return that result.
 */
 
+function findLongestWordLength(str) {
+	// create a function to hold the longest word.  Pass a string through the function.
+	let words = str.split(" "); // use the .split() method to separate via every space.
+	let longestWord = ""; //create a variable to hold the longestWord variable.  use a empty string.
 
-  function findLongestWordLength(str) {  // create a function to hold the longest word.  Pass a string through the function.
-    let words = str.split(', '); // use the .split() method to separate via  a comma.
-    let maxLength = 0;  //create a variable to start at 0. 
-  
-    for (let i = 0; i < words.length; i++) {  // create a for loop to loop through the words variable and use the .length() method 
-      //to measure and iterate one at a time.
-      if (words[i].length > maxLength) {  //compare words in array that are greater than 0.
-        maxLength = words[i].length;  // creates a variable that loops through the array and uses the .length() method to find the longest word.
-      }
-    }
-    return maxLength;  // returns the longest word
-  }
-  
+	for (let i = 0; i < words.length; i++) {
+		// create a for loop to loop through the words variable--to measure and iterate one at a time.
+		if (words[i].length > longestWord.length) {
+			//compare length of the current word in the loop with the length of the longest word.
+			longestWord = words[i]; // puts the longest word in the longestWord variable.
+		}
+	}
+	return longestWord; // returns the longest word
+}
 
-console.log(findLongestWordLength('hello', 'worlds', 'hello world')); 
-
+console.log(
+	findLongestWordLength("I understand the errors that I had in my code.")
+);
 
 // other methods: 1. find() 2. sort() 3. map()
-
-
-
-
-
-
-// let wordList  = ('hello, world, newWorld')
-
-// function longestWord(str) {
-//     let wordList = str.split(', '); // use the split method to separate string based on comma space
-//    let maxLength = 0;  // maximum base length
-   
-//    for (let i = 0; i < wordList.length; i++) {  // loop through array based on lenght method
-//     // iterating one at a time. 
-//         if (wordList[i] > maxLength) { //looping through array indexes--looking to see which one is 
-//             // greater than maxLength
-//             maxLength = words[i].length;  // when the maxlength word = the longest word in the array
-//         }
-//     }
-//     return maxLength; // returns longest word
-// }
-
