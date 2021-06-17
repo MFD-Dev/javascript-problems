@@ -23,9 +23,10 @@ function countVowels(str) {
   //create a counter variable
   let counts = 0; 
   
-  
-  for(let i = 0; i < arrayOfLetters.length; i++) {  // create a for loop for the variable that uses the .split() w/t empty string. 
+  // create a for loop for the variable that uses the .split() w/t empty string. 
     // the vowel array and increment by 1
+  for(let i = 0; i < arrayOfLetters.length; i++) {  
+      // looping throught the array to grab each indvidual item inside of the array.  zero-based indexing.
     if (vowels.includes(arrayOfLetters[i])) { // use the includes method and pass the sentence parameter and loop through the indexes.
       counts++;  // the counter adds all of the vowels
    
