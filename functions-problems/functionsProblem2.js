@@ -18,7 +18,8 @@ function countVowels(str) {
   let arrayOfLetters = str.split(""); //using the parameter with the .split() method
 //   console.log(arrayOfLetters)
   // create a variable that accepts vowels--listed them all out--could use the toLowerCase() method to transform within the for loop. 
-  const vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
+//   const vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
+const vowels = ['a', 'e', 'i', 'o', 'u'];
 //   console.log(vowels)
   //create a counter variable
   let counts = 0; 
@@ -27,7 +28,7 @@ function countVowels(str) {
     // the vowel array and increment by 1
   for(let i = 0; i < arrayOfLetters.length; i++) {  
       // looping throught the array to grab each indvidual item inside of the array.  zero-based indexing.
-    if (vowels.includes(arrayOfLetters[i])) { // use the includes method and pass the sentence parameter and loop through the indexes.
+    if (vowels.includes(arrayOfLetters[i].toLowerCase())) { // use the includes method and pass the sentence parameter and loop through the indexes.
       counts++;  // the counter adds all of the vowels
    
     };
@@ -35,4 +36,4 @@ function countVowels(str) {
   return counts; // returns the number 
 }
 
-console.log(countVowels('How many vowels is this?'));
+console.log(countVowels('HOw many vowels is this?'));
