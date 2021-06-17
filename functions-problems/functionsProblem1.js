@@ -10,23 +10,25 @@ longest word within the parameter.
 7.  return that result.
 */
 
-function findLongestWordLength(str) {
-	// create a function to hold the longest word.  Pass a string through the function.
-	let words = str.split(" "); // use the .split() method to separate via every space.
-	let longestWord = ""; //create a variable to hold the longestWord variable.  use a empty string.
 
-	for (let i = 0; i < words.length; i++) {
-		// create a for loop to loop through the words variable--to measure and iterate one at a time.
-		if (words[i].length > longestWord.length) {
-			//compare length of the current word in the loop with the length of the longest word.
-			longestWord = words[i]; // puts the longest word in the longestWord variable.
-		}
-	}
-	return longestWord; // returns the longest word
-}
+  function findLongestWordLength(str) {  // create a function to hold the longest word.  Pass a string through the function.
+    let words = str.split(' '); // use the .split() method to separate via space.
+   
+    let longestWord = "";  //create a variable with empty string to hold the value. 
+  
+    for (let i = 0; i < words.length; i++) {  // create a for loop to loop through the words variable and use the .length() method 
+      //to measure and iterate one at a time.
+      if (words[i].length > longestWord.length) {  //compare words in array that are the longest.
+        longestWord = words[i];  // creates a variable that holds the longestWord value.
+      }
+    }
+    return longestWord;  // returns the longest word
+  }
+  
 
-console.log(
-	findLongestWordLength("I understand the errors that I had in my code.")
-);
+console.log(findLongestWordLength('hello hellothere world')); 
 
 // other methods: 1. find() 2. sort() 3. map()
+
+
+
