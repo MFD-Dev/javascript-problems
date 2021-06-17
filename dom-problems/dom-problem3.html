@@ -1,0 +1,54 @@
+<!-- /*
+Create a basic HTML page with a table and two rows in it.
+Then, write a JavaScript function to add rows to a table.
+*/ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+      table, td {
+        border: 1px solid black;
+      }
+    </style>
+</head>
+<body>
+    <table id="myTable">
+        <tr>
+          <td>row 1 cell1</td>
+          <td>row 2 cell2</td>  
+        </tr>
+        
+    </table>
+  <br>
+  
+  <button onclick="myCreateFunction()">Create Row</button>
+  <script>
+    function myCreateFunction() {
+      let table = document.getElementById("myTable");
+      let row = table.insertRow(0);
+      let cell1 = row.insertCell(0);
+      let cell2 = row.insertCell(1);
+      cell1.innerHTML = "NEW CELL1";
+      cell2.innerHTML = "NEW CELL2";
+    }
+  </script>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr></tr>
+        <tr></tr>
+    </table>
+</body>
+</html>
