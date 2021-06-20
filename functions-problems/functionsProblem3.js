@@ -24,7 +24,7 @@ function countString(str, letter) {
      // check if the character is at that position
     // charAt method returns a character at a specified index.
     // using a if statement to search zero based index.
-        if (str.charAt(i) == letter) {
+        if (str.charAt(i).toLowerCase() === letter.toLowerCase()) { //used ===
             count += 1;
         }
     }
@@ -40,3 +40,5 @@ const result = countString(string, letterToCheck);
 
 // displaying the result
 console.log(result);
+
+console.log(countString("hello there", "H"))
