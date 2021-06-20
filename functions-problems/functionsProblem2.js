@@ -10,9 +10,9 @@ Hint: use the "split", the Array#includes method and, a "for" loop or "forEach" 
 --  call the function and pass in a string.
  
 */
-
+// const vowels = ['a', 'e', 'i', 'o', 'u'];
 //create a variable that takes a string as a parameter
-function countVowels(str) {
+function countVowels(str, letter) {
   //variables
   // create a placeHolder for the vowels, using the split method-- with no space.
   let arrayOfLetters = str.split(""); //using the parameter with the .split() method
@@ -30,10 +30,13 @@ const vowels = ['a', 'e', 'i', 'o', 'u'];
       // looping throught the array to grab each indvidual item inside of the array.  zero-based indexing.
     if (vowels.includes(arrayOfLetters[i].toLowerCase())) { // use the includes method and pass the sentence parameter and loop through the indexes.
       counts++;  // the counter adds all of the vowels
+      // console.log(vowels)
    
     };
   }
   return counts; // returns the number 
 }
+
+
 
 console.log(countVowels('HOw many vowels is this?'));
