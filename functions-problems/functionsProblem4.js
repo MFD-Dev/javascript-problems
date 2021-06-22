@@ -26,8 +26,8 @@ function checkIfPalindrome(str) {
   return 'It is a palindrome'
 }
 // input string
-const string  = 'Hello Mr. Palindrome.'
-
+// const string  = 'Hello Mr. Palindrome.'
+   const string = 'racecar'
 // call the function 
 const result = checkIfPalindrome(string)
 
