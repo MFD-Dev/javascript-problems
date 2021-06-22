@@ -1,11 +1,11 @@
-/*
+<!-- /*
 Create an HTML page with a dropdown list with three items in it, then write a JavaScript function that displays the number of items and displays the item in the list.
 */
 /*
 -- create a html page
 -- create a dropdown list
 --  create a function that can be called to display the items.
-*/
+*/ -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -81,15 +81,19 @@ function myFunction() {
 }
 
 // Close the dropdown menu if the user clicks outside of it
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
+window.onclick = function(event) {   // only works on the dropdown.  
+  if (!event.target.matches('.dropbtn')) {  // if it doesn't match this event then it drops down list.
     var dropdowns = document.getElementsByClassName("dropdown-content");
     var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
+    for (i = 0; i < script.dropdowns.length; i++) {  // loops through entire list. 
+      var openDropdown = dropdowns[i];  //  creates a variable for is the dropdown is open.
+      if (openDropdown.classList.contains('show')) {  // grab it if it is showing.
+        openDropdown.classList.remove('show');  // removes show, so closes list.
       }
     }
   }
 }
+</script>
+
+ </body> 
+</html>
