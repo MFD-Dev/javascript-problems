@@ -1,10 +1,10 @@
-/*
+<!-- /*
 Create a P element with a link inside.
 Then, write a JavaScript function to get the HREF attribute of the link.
-*/
+*/ -->
 
 
-
+<!-- ?? Not quite sure -->
 
 <!DOCTYPE html>
  <html>
@@ -14,18 +14,23 @@ Then, write a JavaScript function to get the HREF attribute of the link.
          <title>JS Bin</title>
     </head>
     <body>
-        <p><a id="g3" href="www.google.com"></a>
-        Paragraph elment
-        </p>
+        <p><a id="g3" href="www.google.com">
+            Paragraph element
+        </a></p>
 
     <script>
     // /*
     // Create a P element with a link inside.
     // Then, write a JavaScript function to get the HREF attribute of the link.
     // */
-        let site = document.getElementById("g3").href;
 
-        console.log(site) 
+    function myFunction() {
+
+        let site = document.getElementById("g3").href = "www.google.com";
+    }
+        
+
+        // console.log(site) 
     </script>
     </body>
 </html>
