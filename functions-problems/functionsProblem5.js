@@ -7,11 +7,18 @@
 // For numbers that are multiples of both three and five print "FizzBuzz".
 
 /*
+//Initial Pseudo//
 -- create a for loop to iterate through 1-100;
 -- create conditional statements that search to match for the3 different multiples
 -- log all of the multiples
 -- 
 */ 
+
+/*
+-- create a loop to iterate through 1-100
+-- use modulus operator to get diff between index and 3 & 5 and console log.
+-- use else statement to run default.
+*/
 
 // for loop to iterate through 1-100  
 for (var i=1; i < 101; i++){
