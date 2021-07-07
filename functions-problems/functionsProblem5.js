@@ -21,9 +21,12 @@
 */
 
 // for loop to iterate through 1-100  
-for (var i=1; i < 101; i++){
+function myFunction() {
+  
+  for (var i=1; i < 101; i++){
     if (i % 15 == 0) console.log("FizzBuzz");// use modulus operator for 3 & 5 matches
     else if (i % 3 == 0) console.log("Fizz");// zero index scan to match diff of 3.
     else if (i % 5 == 0) console.log("Buzz");// zero index scan to match diff of 5.
     else console.log(i);// if none of those match, then log the number in the index.
+ }
 }
