@@ -14,7 +14,7 @@ Then, write a JavaScript function to get the HREF attribute of the link.
          <title>JS Bin</title>
     </head>
     <body>
-        <p><a id="g3" href="www.google.com">
+        <p><a id="g3" href="www.google.com/">
             Paragraph element
         </a></p>
 
@@ -26,11 +26,12 @@ Then, write a JavaScript function to get the HREF attribute of the link.
 
     function myFunction() {
 
-        let site = document.getElementById("g3").href = "www.google.com";
+        let site = document.getElementById("g3").href;
+        // console.log(site)
+        alert('This is the site ' + site);
     }
-        
-
-        // console.log(site) 
+    
+         console.log(myFunction()) 
     </script>
     </body>
 </html>
