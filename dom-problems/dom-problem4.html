@@ -7,93 +7,38 @@ Create an HTML page with a dropdown list with three items in it, then write a Ja
 --  create a function that can be called to display the items.
 */ -->
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style> 
-   /* Dropdown Button */
-.dropbtn {
-  background-color: #3498DB;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-}
-
-/* Dropdown button on hover & focus */
-.dropbtn:hover, .dropbtn:focus {
-  background-color: #2980B9;
-}
-
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-/* Links inside the dropdown */
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #ddd}
-
-/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-.show {display:block;}
-    </style>
+<meta charset="utf-8">
+<title>Volume of a Sphere</title>
+<style>  
+body{padding-top:30px;}
+label,input{display:block;}  
+</style>
 </head>
 <body>
- <div class="dropdown">
-  <button onclick="myFunction()" class="dropbtn">Dropdown</button>
-  <div id="myDropdown" class="dropdown-content">
-    <a href="#">Link 1</a>
-    <a href="#">Link 2</a>
-    <a href="#">Link 3</a>
-  </div>
-</div>
-  <script>
-   
-  //  /////////////////////////////////////////////
+  <form>
+    <label for="items">Dropdown List:</label>
+    <select name="" id="items">
+      <option value="" selected="selected">Select</option><br>
+      <option value="DK">Desktop</option>
+      <option value="SC">Screen</option>
+      <option value="MS">Mouse</option>
+    </select>
+    <input type="button" onclick="myFunction()" value="Count of Items">
+  </form>
 
-  /* When the user clicks on the button,
-toggle between hiding and showing the dropdown content */
-function myFunction() {
-  document.getElementById("myDropdown").classList.toggle("show");
-}
-
-// Close the dropdown menu if the user clicks outside of it
-window.onclick = function(event) {   // only works on the dropdown.  
-  if (!event.target.matches('.dropbtn')) {  // if it doesn't match this event then it drops down list.
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < script.dropdowns.length; i++) {  // loops through entire list. 
-      var openDropdown = dropdowns[i];  //  creates a variable for is the dropdown is open.
-      if (openDropdown.classList.contains('show')) {  // grab it if it is showing.
-        openDropdown.classList.remove('show');  // removes show, so closes list.
+<script>
+      function myFunction() {
+        alert("There are " + document.getElementById("items").length + " items in the list.");
+        for (i = 0; i < 1; i++){
+          alert(document.getElementById("items").textContent);
+        }
       }
-    }
-  }
-}
-</script>
 
- </body> 
+
+</script>
+  
+</body>
 </html>
